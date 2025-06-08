@@ -2,15 +2,14 @@ package com.arman.elk.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SourceDocument {
 
     private String traceId;
-    private String requestDtoData;
+    private String request;
     private String action;
     private String serviceId;
-    private String serviceName;
+    private String serviceFaName;
     private String status;
     private Long timestamp; // Assuming timestamp is a long
     private String dateTime; // Optional, as it's not in all your examples
@@ -25,12 +24,12 @@ public class SourceDocument {
         this.traceId = traceId;
     }
 
-    public String getRequestDtoData() {
-        return requestDtoData;
+    public String getRequest() {
+        return request;
     }
 
-    public void setRequestDtoData(String requestDtoData) {
-        this.requestDtoData = requestDtoData;
+    public void setRequest(String request) {
+        this.request = request;
     }
 
     public String getAction() {
@@ -49,12 +48,12 @@ public class SourceDocument {
         this.serviceId = serviceId;
     }
 
-    public String getServiceName() {
-        return serviceName;
+    public String getServiceFaName() {
+        return serviceFaName;
     }
 
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+    public void setServiceFaName(String serviceFaName) {
+        this.serviceFaName = serviceFaName;
     }
 
     public String getStatus() {
